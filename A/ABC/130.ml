@@ -1,0 +1,1 @@
+let _ =Scanf.sscanf (read_line ()) "%d %d" (fun x a -> if x < a then print_endline "0" else print_endline "10")

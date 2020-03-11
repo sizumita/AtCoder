@@ -1,0 +1,1 @@
+let _ = Scanf.sscanf (read_line ()) "%d %d" (fun a p -> print_endline (string_of_int ((a * 3 + p) / 2)))

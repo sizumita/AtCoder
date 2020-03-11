@@ -1,0 +1,1 @@
+let _ = Scanf.sscanf (read_line ()) "%d %d %d" (fun p q r -> print_endline (string_of_int (List.hd (List.sort compare [p+q;q+r;r+p]))))

@@ -1,0 +1,1 @@
+let _ = Scanf.sscanf (read_line ()) "%s %s" (fun a b -> print_endline (b ^ a))
