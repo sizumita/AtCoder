@@ -1,0 +1,1 @@
+let _ = Scanf.sscanf (read_line ()) "%d %d" (fun a b -> print_endline @@ string_of_int ((a-1) * (b-1)))

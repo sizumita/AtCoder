@@ -1,0 +1,1 @@
+let _ = let a = read_int () in print_endline @@ string_of_int ((a/2) * (a/2))

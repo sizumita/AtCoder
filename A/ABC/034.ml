@@ -1,0 +1,1 @@
+let _ = Scanf.sscanf (read_line ()) "%d %d" (fun a b -> if a > b then "Worse" else "Better") |> print_endline
