@@ -1,0 +1,1 @@
+let _ = (if read_int () = 1 then "ABC" else "chokudai") |> print_endline

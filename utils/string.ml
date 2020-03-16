@@ -14,10 +14,16 @@ let string_of_chars chars =
   List.iter (Buffer.add_char buf) chars;
   Buffer.contents buf
 
-let string_count string target =
+let count_char str target =
   let rec count lst =
     match lst with
     | [] -> 0
     | first :: rest -> if first = target then 1 + count rest else count rest
   in let explode s = List.init (String.length s) (String.get s)
-  in count @@ explode string
+  in count @@ explode str
+
+(* 前からst文字を切り抜く *)
+let slice st str = String.init (String.length str - st) (fun a -> String.get str (a+st))
+
+(* 後ろからed文字を切り抜く *)
+let back_slice ed str = String.init (String.length str - ed) (String.get str)

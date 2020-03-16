@@ -1,0 +1,1 @@
+let _ = print_endline (read_line () ^ "pp")

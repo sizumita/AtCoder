@@ -1,0 +1,1 @@
+let _ = (if read_int () mod 3 = 0 then "YES" else "NO") |> print_endline
