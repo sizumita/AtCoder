@@ -1,0 +1,1 @@
+let _ = Printf.printf "%f\n" ((read_float () /. 3.) ** 3.)

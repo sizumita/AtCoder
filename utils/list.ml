@@ -21,3 +21,15 @@ let get_all_elements l =
      [] -> existed
     | first :: rest -> if List.exists (fun a -> a = first) existed then get existed rest else get (first :: existed) rest
   in get [] l
+
+let average lst =
+  let rec sum lst =
+    match lst with
+    | [] -> 0
+    | first :: rest -> first + sum rest
+  in (float_of_int @@ sum lst) /. (float_of_int @@ List.length lst)
+
+let rec sum lst =
+  match lst with
+  | [] -> 0
+  | first :: rest -> first + sum rest
