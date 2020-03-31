@@ -35,5 +35,9 @@ let rec sum lst =
   | first :: rest -> first + sum rest
 
 
-let binary_search key target = 
-  1
+let count_list lst target =
+  let rec loop l =
+    match l with
+    | [] -> 0
+    | first :: rest -> if first = target then 1 + loop rest else loop rest
+  in loop lst
