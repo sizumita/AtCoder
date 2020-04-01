@@ -21,3 +21,13 @@ and flatten = function
   [] -> []
 | x::xs -> x @ (flatten xs)
 and flatmap func ls = flatten (List.map func ls)
+
+(* 組み合わせ *)
+let rec combination k list =
+    if k <= 0 then [ [] ]
+    else match list with
+         | [] -> []
+         | h :: tl ->
+            let with_h = List.map (fun l -> h :: l) (combination (k-1) tl) in
+            let without_h = combination k tl in
+            with_h @ without_h
