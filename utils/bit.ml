@@ -27,3 +27,10 @@ let int_to_list bit n =
     | i when i = n -> []
     | _ -> if is_bit_one bit i then i :: get (i+1) else get (i+1)
   in get 0
+
+let bit_list bit n =
+  let rec get i =
+    match i with 
+    | i when i = n -> []
+    | _ -> if is_bit_one bit i then 1 :: get (i+1) else 0 :: get (i+1)
+  in get 0

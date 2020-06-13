@@ -41,3 +41,21 @@ let count_list lst target =
     | [] -> 0
     | first :: rest -> if first = target then 1 + loop rest else loop rest
   in loop lst
+
+
+module CountDict = Map.Make(Int)
+let cnt_int lst =
+  let rec add_lst dict l =
+    match l with
+    | [] -> dict
+    | first :: rest ->
+      if CountDict.mem first dict then add_lst (CountDict.add first ((CountDict.find first dict) + 1) dict) rest else
+      add_lst (CountDict.add first 1 dict) rest
+  in add_lst CountDict.empty lst
+
+
+
+
+
+
+
